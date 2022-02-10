@@ -1,11 +1,10 @@
-const { response } = require('express')
 const express = require('express')
-const res = require('express/lib/response')
 const morgan = require('morgan')
 const app = express()
 const cors = require('cors')
 
 app.use(cors())
+app.use(express.static('build'))
 
 let persons = [
     {
